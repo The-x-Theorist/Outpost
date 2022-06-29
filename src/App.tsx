@@ -1,24 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Checkbox, { CheckboxInput } from "./components/checkbox";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <h1 className="heading">Checkbox Input</h1>
+        <div className="wrapper">
+          <div className="checkbox__input">
+            <Checkbox></Checkbox>
+          </div>
+          <div className="checkbox__input">
+            <Checkbox value={true}></Checkbox>
+          </div>
+          <div className="checkbox__input">
+            <Checkbox defaultValue={true}></Checkbox>
+          </div>
+          <div className="checkbox__input">
+            <Checkbox onChange={(newCheck) => console.log(newCheck)}></Checkbox>
+          </div>
+          <div className="checkbox__input">
+            <CheckboxInput></CheckboxInput>
+          </div>
+          <div className="checkbox__input">
+            <CheckboxInput value={true}></CheckboxInput>
+          </div>
+          <div className="checkbox__input">
+            <CheckboxInput defaultValue={true}></CheckboxInput>
+          </div>
+          <div className="checkbox__input">
+            <CheckboxInput
+              onChange={(newCheck) => console.log(newCheck)}
+            ></CheckboxInput>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
